@@ -22,7 +22,7 @@ class Stack {
 
   push(item) {
     if (this.stackControl.length >= this.MAX_SIZE){
-      throw new Error ("STACK_OVERFLOW")
+      return "STACK_OVERFLOW"
     } else {
       this.stackControl.push(item)
       return this.stackControl
@@ -31,7 +31,7 @@ class Stack {
 
   pop() {
     if (this.stackControl.length <= 0){
-      throw new Error ("STACK_UNDERFLOW")
+      return "STACK_UNDERFLOW"
     } else {
       return this.stackControl.pop()
     }
